@@ -1,0 +1,9 @@
+FROM python:3.9
+
+WORKDIR /apps
+
+COPY . /apps
+
+RUN pip3 install -r requirements-dev.txt
+
+CMD [ "python3", "-m" , "unittest" ]

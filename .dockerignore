@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+__pycache__/
+venv
+*.py[cod]
+.git
+.gitignore
+Dockerfile*
+README.md
+Makefile

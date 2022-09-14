@@ -1,9 +1,17 @@
 ## Usage
+### Unittests
+Run unittests
+```bash
+docker build -t kmscrypt -f Dockerfile.tests . --no-cache
+docker run --name kmscrypt kmscrypt 
+```
+
+### Run lambda locally
 Build and run docker image 
 
 ```bash
 docker build -t kmscrypt . --no-cache
-docker run -e KMS_ID=123-456-789 -e AWS_REGION=ap-southeast-2 -e AWS_PROFILE=test -v$HOME/.aws:/root/.aws:ro -p 9000:8080 kmscrypt
+docker run -e AWS_PROFILE=ss-sandbox-devops -e KMSKEYID=123-456-789 -v$HOME/.aws:/root/.aws:ro -p 9000:8080 kmscrypt
 ```
 
 GET request

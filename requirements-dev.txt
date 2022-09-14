@@ -1,0 +1,2 @@
+-r requirements.txt
+moto==4.0.3
